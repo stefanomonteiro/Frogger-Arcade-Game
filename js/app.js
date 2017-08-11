@@ -353,14 +353,14 @@ var gameReset = function() {
 
 // Player and Enemies Collision
 Player.prototype.checkCollisions = function() {
-    if (starActive() === false) {
+    if (starActive() === false) {   //Disables collision if starActive is true
         for (i = 0; i < allEnemies.length; i++)
-            if (player.x < allEnemies[i].x + allEnemies[i].width &&
-                player.x + player.width > allEnemies[i].x &&
-                player.y < allEnemies[i].y + allEnemies[i].height &&
-                player.height + player.y > allEnemies[i].y) {
+            if (this.x < allEnemies[i].x + allEnemies[i].width &&
+                this.x + player.width > allEnemies[i].x &&
+                this.y < allEnemies[i].y + allEnemies[i].height &&
+                this.height + this.y > allEnemies[i].y) {
 
-                player.reset();
+                this.reset();
                 streak = 0;
                 life--;
                 if (life < 0) {
@@ -375,10 +375,10 @@ Player.prototype.checkCollisions = function() {
 // Player and Gems Collision
 Player.prototype.gemsCollisions = function() {
     for (i = 0; i < allGems.length; i++)
-        if (player.x < allGems[i].x + allGems[i].width &&
-            player.x + player.width > allGems[i].x &&
-            player.y < allGems[i].y + allGems[i].height &&
-            player.height + player.y > allGems[i].y) {
+        if (this.x < allGems[i].x + allGems[i].width &&
+            this.x + this.width > allGems[i].x &&
+            this.y < allGems[i].y + allGems[i].height &&
+            this.height + this.y > allGems[i].y) {
 
             if (allGems[i].sprite === 'images/Gem-Blue.png') {
 
@@ -453,13 +453,13 @@ var lastLocY = function() { //Reverse Array to use last position
 
 
 Player.prototype.rocksCollisions = function() {
-    if (starActive() === false) {
+    if (starActive() === false) {   //Disables collision if starActive is true
 
         for (i = 0; i < allRocks.length; i++)
-            if (player.x < allRocks[i].x + allRocks[i].width &&
-                player.x + player.width > allRocks[i].x &&
-                player.y < allRocks[i].y + allRocks[i].height &&
-                player.height + player.y > allRocks[i].y) {
+            if (this.x < allRocks[i].x + allRocks[i].width &&
+                this.x + this.width > allRocks[i].x &&
+                this.y < allRocks[i].y + allRocks[i].height &&
+                this.height + this.y > allRocks[i].y) {
 
                 lastLocX();
                 lastLocY();
