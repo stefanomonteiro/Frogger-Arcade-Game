@@ -356,7 +356,7 @@ Player.prototype.checkCollisions = function() {
     if (starActive() === false) {   //Disables collision if starActive is true
         for (i = 0; i < allEnemies.length; i++)
             if (this.x < allEnemies[i].x + allEnemies[i].width &&
-                this.x + player.width > allEnemies[i].x &&
+                this.x + this.width > allEnemies[i].x &&
                 this.y < allEnemies[i].y + allEnemies[i].height &&
                 this.height + this.y > allEnemies[i].y) {
 
