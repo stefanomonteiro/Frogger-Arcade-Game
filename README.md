@@ -10,7 +10,7 @@ For detailed instructions on how to get started, check out this [guide](https://
 # Udacity Project - Frogger: Arcade Game by Stafano Monteiro
 
 
-**[Play Game](https://stefanomonteiro.github.io/)**
+**[Play Game](https://stefanomonteiro.github.io/Frogger-Arcade-Game/)**
 
 ## **Project Requirements:**
 
